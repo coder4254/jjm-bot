@@ -19,8 +19,8 @@ genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 # Constants
 emb_model = "models/embedding-001"
 llm_model = "gemini-1.0-pro"
-CHUNK_SIZE = 1024
-OVERLAP_SIZE = 256
+CHUNK_SIZE = 512
+OVERLAP_SIZE = 128
 CHAIN_TYPE = "stuff"
 
 # Translator
@@ -152,7 +152,7 @@ def main():
             st.markdown("3. If the model seems to be hallucinating, try refreshing the page or clearing the cache (of the Streamlit app).")
 
         # Footer in sidebar
-        st.sidebar.markdown("<br>" * 2, unsafe_allow_html=True)
+        st.sidebar.markdown("<br>" * 1, unsafe_allow_html=True)
         st.sidebar.markdown("-" * 20)
         st.sidebar.markdown("Developed by: [Chandan Kumar](mailto:chandankr014@gmail.com)")
         st.sidebar.markdown("© JJM - IIM Bangalore Cell")

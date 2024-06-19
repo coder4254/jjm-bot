@@ -20,8 +20,8 @@ genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 # model and embedding
 emb_model = "models/embedding-001"
 llm_model = "gemini-1.0-pro"
-CHUNK_SIZE = 1024
-OVERLAP_SIZE = 256
+CHUNK_SIZE = 512
+OVERLAP_SIZE = 128
 CHAIN_TYPE = "stuff"
 
 def get_pdf_text(pdf_docs):
